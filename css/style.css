@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #5D3FD3;
+    --color-success: #FF5733;
+    --color-warning: #FFC300;
+    --color-danger: #C70039;
+    --color-danger-varient: #590840;
+    --color-white: #FFFFFF;
+    --color-light: #b0949c;
+    --color-black: #000000;
+    --color-green: #32CD32;
+    --color-brown: #7B3F00;
+    --color-red: #FF0000;
+    --color-bg: #250056;
+    --color-bg1: #5a3a85;
+    --color-bg2: #876baf;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+    color: var(--color-white);
+    background: var(--color-bg);
+    align-items: flex-start;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+section {
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 16px 32px;
+    border: 2px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.btn-primary {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+/* ========================== NAVBAR ====================== */
+
+nav {
+    background: transparent;
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+/* Change navbar styles on scroll using Javascript */
+
+.window-scroll {
+    background: var(--color-primary);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    display: none;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav_menu a {
+    font-size: 14px;
+    transition: all 400ms ease;
+
+}
+
+.nav_menu a:hover {
+    color: var(--color-bg2);
+    transition: var(--transition);
+}
+
+/* ========================== HEADER ====================== */
+
+header {
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 80px;
+
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 80px;
+    height: 100%;
+}
+
+.header_left p {
+    margin: 15px 0 30px;
+}
+
+/* ========================== CATEGORIES ====================== */
+
+.categories {
+    background: var(--color-bg1);
+    height: 450px;
+}
+
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.categories_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* gap: 70px; */
+}
+
+.categories_left {
+    margin-right: 60px;
+}
+
+.categories_left p {
+    margin: 15px 0 50px;
+}
+
+.category_icon i {
+    font-size: 25px;
+}
+
+.categories_right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category {
+    background: var(--color-bg2);
+    padding: 30px;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.category:hover {
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.category:nth-child(2) .category_icon {
+    background: var(--color-danger);
+}
+
+.category:nth-child(3) .category_icon {
+    background: var(--color-warning);
+}
+
+.category:nth-child(4) .category_icon {
+    background: var(--color-success);
+}
+
+.category:nth-child(5) .category_icon {
+    background: var(--color-green);
+}
+
+.category:nth-child(6) .category_icon {
+    background: var(--color-brown);
+}
+
+.category_icon {
+    background: var(--color-primary);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.category h4 {
+    margin: 30px 0 15px;
+}
+
+.category p {
+    font-size: 16px;
+}
+
+/* ========================== POPULAR COURSES ====================== */
+
+.courses {
+    margin-top: 160px;
+}
+
+.courses_cointainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.courses_details {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.courses_details:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.courses_info {
+    padding: 35px;
+}
+
+.courses_info p {
+    margin: 20px 15px 30px;
+    font-size: 16px;
+}
+
+/* ========================== FAQS ====================== */
+
+.faqs {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
+
+}
+
+.faqs_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.faq {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    height: fit-content;
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+.faq h4 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.faqs_icon {
+    align-self: flex-start;
+    font-size: 25px;
+}
+
+.faq p {
+    margin-top: 20px;
+    display: none;
+}
+
+.faq.open p {
+    display: block;
+}
+
+/* ========================== TESTIMONIALS ====================== */
+
+.testimonial_container {
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.testimonial {
+    padding-top: 30px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 15px solid var(--color-bg1);
+}
+
+.testimonial_info {
+    text-align: center;
+}
+
+.testimonial_body {
+    background: var(--color-primary);
+    padding: 35px;
+    margin-top: 45px;
+}
+
+.testimonial_body::before {
+    content: "";
+    display: block;
+    background: linear-gradient(-225deg, transparent, var(--color-primary), var(--color-primary), var(--color-primary));
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 50%;
+    transform: rotate(45deg);
+    margin-top: -57px;
+}
+
+/* ========================== FOOTER ====================== */
+
+footer {
+    background: var(--color-bg1);
+    padding-top: 80px;
+    font-size: 16px;
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+}
+
+.footer_container>div h4 {
+    margin-bottom: 20px;
+}
+
+.footer_1 p {
+    margin: 0 0 30px;
+}
+
+footer ul li {
+    margin-bottom: 12px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+
+}
+
+.footer_social {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.footer_copyright {
+    text-align: center;
+    margin-top: 65px;
+    padding: 20px 0;
+    border-top: 2px solid var(--color-white);
+}
+
+
+/* ========================== MEDIA QUERIES (TABLETS) ====================== */
+
+@media screen and (max-width:1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    /* ========================== NAVBAR ====================== */
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 30px;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 80px;
+        right: 5%;
+        height: fit-content;
+        width: 290px;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        height: 95px;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    .nav_menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_menu li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_menu li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    @keyframes animateNavItems {
+        0% {
+            transform: rotateZ(-90deg);
+        }
+
+        100% {
+            transform: rotateZ(0);
+            opacity: 1;
+        }
+    }
+
+    .nav_menu li a {
+        background: var(--color-primary);
+        box-shadow: -65px 95px 160px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .nav_menu li a:hover {
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    /* ========================== HEADER ====================== */
+
+    header {
+        height: 55vh;
+        margin-bottom: 50px;
+    }
+
+    .header_container {
+        gap: 0;
+        padding-bottom: 50px;
+    }
+
+    /* ========================== CATEGORIES ====================== */
+    .categories {
+        height: auto;
+    }
+
+    .categories_container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .categories_left {
+        margin-right: 0;
+    }
+
+    /* ========================== POPULAR COURSES ====================== */
+    .courses {
+        margin-top: 0;
+    }
+
+    .courses h2 {
+        padding-bottom: 50px;
+    }
+
+    .courses_cointainer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ========================== FAQS ====================== */
+    .faqs {
+        padding-bottom: 50px;
+    }
+
+    .faqs_container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== FOOTER ====================== */
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ========================== MEDIA QUERIES (PHONE) ====================== */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* ========================== NAVBAR ====================== */
+    .nav_menu {
+        right: 3%;
+    }
+
+    /* ========================== HEADER ====================== */
+
+    header {
+        height: 110vh;
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .header_left p {
+        margin-bottom: 40px;
+    }
+
+    .header_right img {
+        margin-bottom: 40px;
+    }
+
+    /* ========================== CATEGORIES ====================== */
+    .categories_right {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+
+    }
+
+    .category {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .category_icon {
+        margin-top: 5px;
+        display: inline-block;
+
+    }
+
+    /* ========================== POPULAR COURSES ====================== */
+    .courses_cointainer {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================== TESTIMONIAL ====================== */
+    .testimonial_body {
+        padding-left: 0 30px;
+    }
+
+    /* ========================== FOOTER ====================== */
+    .footer_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer_1 p {
+        margin: 15px auto;
+    }
+
+    .footer_2 {
+        margin-top: -80px;
+    }
+
+    .footer_3 {
+        margin-top: -50px;
+    }
+
+    .footer_4 {
+        margin-top: -50px;
+    }
+
+    .footer_social {
+        justify-content: center;
+    }
+
+}
