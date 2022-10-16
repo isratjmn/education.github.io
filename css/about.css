@@ -3,18 +3,26 @@
 }
 
 /*======================= ACHIEVEMENTS =====================*/
+
 .about_achievements {
     margin-top: 50px;
 }
 
 .about_achievements-container {
     display: grid;
-    grid-template-columns: 35% 60%;
+    grid-template-columns: 40% 60%;
     gap: 40px;
 }
 
+.about-right h1 {
+    text-align: start;
+}
+.about-right {
+    margin-top: 80px;
+}
 .about-right>p {
-    margin: 25px 0 20px;
+    margin: 25px 0 60px;
+    text-align: start;
 }
 
 .achievements_cards {
@@ -59,8 +67,12 @@
 }
 
 /*======================= TEAMS =====================*/
+
 section.team {
     margin-bottom: 0;
+}
+.team h2 {
+    margin-bottom: 60px;
 }
 
 .team {
@@ -151,6 +163,7 @@ section.team {
 }
 
 /*=======================  MEDIA QUERIES (PHONE) =====================*/
+
 @media screen and (max-width:680px) {
     .achievements_cards {
         grid-template-columns: 1fr 1fr;
