@@ -12,11 +12,11 @@
 /* ------==============================  Aside ========================------ */
 .contact_aside {
     background: var(--color-primary);
-    padding: 50px 20px;
+    padding: 80px 20px;
     border-radius: 15px;
     position: relative;
     bottom: 150px;
-    margin: 0 20px;
+    margin: 20px 20px;
 }
 
 .aside_image {
@@ -39,7 +39,6 @@
 .contact_details li {
     display: flex;
     gap: 15px;
-    /* align-items: center; */
     margin-bottom: 15px;
 }
 
@@ -63,6 +62,7 @@
 }
 
 /* ------==============================  Form ========================------ */
+
 form {
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ form input[type="text"] {
 input,
 textarea {
     padding: 18px;
-    background: var(--color-bg);
+    background: var(--color-white);
     color: var(--color-white);
     width: 100%;
 }
